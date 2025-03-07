@@ -7,10 +7,10 @@ const categoryRoute = require("./category");
 const publisherRoute = require("./publisher");
 const quoteRoute = require("./quote");
 
-router.use("/author", authorRoute);
-router.use("/book", bookRoute);
-router.use("/category", categoryRoute);
-router.use("/publisher", publisherRoute);
-router.use("/quote", quoteRoute);
+router.use("/authors", authorRoute);
+router.use("/books", bookRoute);
+router.use("/categories", categoryRoute);
+router.use("/publishers", publisherRoute);
+router.use("/quotes", quoteRoute);
 
 module.exports = router;
