@@ -2,8 +2,23 @@ const mongoose = require("mongoose");
 
 const BookSchema = mongoose.Schema(
     {
-        name : { type : String, required : true, trim : true},
-        
+        title : { type : String, required : true, unique : true , trim : true},
+        author : {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Author",
+            required : true
+        },
+        publisher : {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Publisher"
+        },
+        category : {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Category"
+        },
+        pageCount : { type : Number },
+        img : { type : String, trim : true },
+        publishedYear : { type : Date }
     },
     {
         timestamps : true

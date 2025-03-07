@@ -2,8 +2,15 @@ const mongoose = require("mongoose");
 
 const QuoteSchema = mongoose.Schema(
     {
-        name : { type : String, required : true, trim : true},
-        
+        text : { type : String, required : true, trim : true},
+        author : {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Author"
+        },
+        book : {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Book"
+        }
     },
     {
         timestamps : true

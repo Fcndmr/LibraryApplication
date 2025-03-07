@@ -2,8 +2,10 @@ const mongoose = require("mongoose");
 
 const AuthorSchema = mongoose.Schema(
     {
-        name : { type : String, required : true, trim : true},
-        
+        name : { type : String, required : true, unique : true , trim : true },
+        birthYear : { type : Date },
+        nationality : { type : String, trim : true },
+        img : { type : String, trim : true }
     },
     {
         timestamps : true

@@ -2,8 +2,9 @@ const mongoose = require("mongoose");
 
 const PublisherSchema = mongoose.Schema(
     {
-        name : { type : String, required : true, trim : true},
-        
+        name : { type : String, required : true, unique : true, trim : true },
+        img : { type : String, trim : true },
+        website : { type : String, trim : true }
     },
     {
         timestamps : true
