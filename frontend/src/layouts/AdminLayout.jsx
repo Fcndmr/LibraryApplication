@@ -34,7 +34,7 @@ function AdminLayout({children}) {
           label: "Add Author",
           path: "/admin/authors/create",
           onClick: () => {
-            navigate("/admin/categories/create");
+            navigate("/admin/authors/create");
           },
         },
         {

@@ -34,7 +34,7 @@ router.get("/:bookId", async (req, res) => {
     }
 });
 
-router.post("/:bookId", async (req, res) => {
+router.put("/:bookId", async (req, res) => {
     try {
         const bookId = req.params.bookId;
         const updatedInfo = req.body;

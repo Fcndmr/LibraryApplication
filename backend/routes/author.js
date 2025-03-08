@@ -35,7 +35,7 @@ router.get("/:authorId", async (req, res) => {
 });
 
 
-router.post("/:authorId", async (req, res) => {
+router.put("/:authorId", async (req, res) => {
     try {
         const authorId = req.params.authorId;
         const updatedInfo = req.body;

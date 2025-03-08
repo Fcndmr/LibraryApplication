@@ -34,7 +34,7 @@ router.get("/:publisherId", async (req, res) => {
     }
 });
 
-router.post("/:publisherId", async (req, res) => {
+router.put("/:publisherId", async (req, res) => {
     try {
         const publisherId = req.params.publisherId;
         const updatedInfo = req.body;

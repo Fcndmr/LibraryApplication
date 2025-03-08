@@ -34,7 +34,7 @@ router.get("/:quoteID", async (req, res) => {
     }
 });
 
-router.post("/:quoteID", async (req, res) => {
+router.put("/:quoteID", async (req, res) => {
     try {
         const quoteID = req.params.quoteID;
         const updatedInfo = req.body;

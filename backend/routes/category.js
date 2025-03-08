@@ -34,7 +34,7 @@ router.get("/:categoryId", async (req, res) => {
     }
 });
 
-router.post("/:categoryId", async (req, res) => {
+router.put("/:categoryId", async (req, res) => {
     try {
         const categoryId = req.params.categoryId;
         const updatedInfo = req.body;
