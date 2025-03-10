@@ -11,6 +11,9 @@ import UpdateCategory from "./pages/Admin/Category/UpdateCategory";
 import PublisherList from "./pages/Admin/Publisher/PublisherList";
 import CreatePublisher from "./pages/Admin/Publisher/CreatePublisher";
 import UpdatePublisher from "./pages/Admin/Publisher/UpdatePublisher";
+import BookList from "./pages/Admin/Book/BookList";
+import CreateBook from "./pages/Admin/Book/CreateBook";
+import UpdateBook from "./pages/Admin/Book/UpdateBook";
 
 function App() {
   return (
@@ -29,6 +32,9 @@ function App() {
           <Route path="publishers" element={<PublisherList/>}/>
           <Route path="publishers/create" element={<CreatePublisher/>}/>
           <Route path="publishers/update/:id" element={<UpdatePublisher/>}/>
+          <Route path="books" element={<BookList/>}/>
+          <Route path="books/create" element={<CreateBook/>}/>
+          <Route path="books/update/:id" element={<UpdateBook/>}/>
         </Route>
       </Routes>
     </>
