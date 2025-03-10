@@ -34,11 +34,11 @@ function AuthorList() {
         } catch (error) {
           console.log("Sunucu hatası...", error);
         }
-      }
+      };
     
     useEffect(() => {
         getAuthors();
-    },[deleteAuthor])
+    },[deleteAuthor]);
 
     const columns = [
         {

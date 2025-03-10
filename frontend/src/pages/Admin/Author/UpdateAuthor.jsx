@@ -2,7 +2,7 @@ import { InputNumber, Button, Form, Input } from "antd";
 import { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
-function UpdatedAuthor() {
+function UpdateAuthor() {
     const [form] = Form.useForm();
   const formLayout = "vertical";
   const params = useParams();
@@ -28,7 +28,7 @@ function UpdatedAuthor() {
     } catch (error) {
         console.log("Sunucu hatası...", error);
     }
-  }
+  };
 
   useEffect(() => {
     getAuthorById()
@@ -88,4 +88,4 @@ function UpdatedAuthor() {
   );
 }
 
-export default UpdatedAuthor;
+export default UpdateAuthor;
