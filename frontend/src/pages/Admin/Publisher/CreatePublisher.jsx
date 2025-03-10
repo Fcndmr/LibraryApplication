@@ -1,32 +1,32 @@
 import { Button, Form, Input } from "antd";
 import { useNavigate } from "react-router-dom";
 
-function CreateCategory() {
+function CreatePublisher() {
   const [form] = Form.useForm();
   const formLayout = "vertical";
   const navigate = useNavigate();
 
-  const createCategory = async (values) => {
+  const createPublisher = async (values) => {
     try {
-        const response = await fetch("http://localhost:7000/api/categories", {
+        const response = await fetch("http://localhost:7000/api/publishers", {
             method : "POST",
             headers : { "Content-Type" : "application/json"},
             body : JSON.stringify(values)
         });
         if(response.ok){
-            console.log("Kategori başarıyla oluşturuldu...");
-            navigate("/admin/categories");
+            console.log("Yayınevi başarıyla oluşturuldu...");
+            navigate("/admin/publishers");
         }else{
-            console.log("Kategori oluşturulurken bir hata oluştu...");
+            console.log("Yayınevi oluşturulurken bir hata oluştu...");
         }
     } catch (error) {
         console.log("Sunucu hatası...", error);
     }
   };
-  
+
   return (
     <>
-      <div className="text-4xl">Create Category Panel</div>
+      <div className="text-4xl">Create Publisher Panel</div>
       <br />
       <hr />
       <br />
@@ -36,17 +36,20 @@ function CreateCategory() {
         initialValues={{
           layout: formLayout,
         }}
-        onFinish={createCategory}
+        onFinish={createPublisher}
       >
         <Form.Item
-          label="Category Name"
+          label="Publisher Name"
           name="name"
-          rules={[{ required: true, message: "Category name enter..." }]}
+          rules={[{ required: true, message: "Publisher name enter..." }]}
         >
-          <Input placeholder="Category name enter..." />
+          <Input placeholder="Publisher name enter..." />
         </Form.Item>
-        <Form.Item label="Category Description" name="description">
-          <Input.TextArea placeholder="Category description enter..." rows={5}/>
+        <Form.Item label="Publisher Website" name="website">
+          <Input placeholder="Publisher website enter..."/>
+        </Form.Item>
+        <Form.Item label="Publisher Image" name="img">
+          <Input placeholder="Publisher image enter..." />
         </Form.Item>
         <Form.Item>
           <Button type="primary" htmlType="submit">
@@ -58,4 +61,5 @@ function CreateCategory() {
   )
 }
 
-export default CreateCategory
+export default CreatePublisher
+

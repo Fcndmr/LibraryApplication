@@ -18,7 +18,7 @@ function CategoryList() {
         } catch (error) {
           console.log("Sunucu hatası...", error);
         }
-      };
+    };
 
     const deleteCategory = async (categoryId) => {
         try {

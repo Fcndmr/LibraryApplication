@@ -8,6 +8,9 @@ import UpdateAuthor from "./pages/Admin/Author/UpdateAuthor";
 import CategoryList from "./pages/Admin/Category/CategoryList";
 import CreateCategory from "./pages/Admin/Category/CreateCategory";
 import UpdateCategory from "./pages/Admin/Category/UpdateCategory";
+import PublisherList from "./pages/Admin/Publisher/PublisherList";
+import CreatePublisher from "./pages/Admin/Publisher/CreatePublisher";
+import UpdatePublisher from "./pages/Admin/Publisher/UpdatePublisher";
 
 function App() {
   return (
@@ -23,6 +26,9 @@ function App() {
           <Route path="categories" element={<CategoryList/>}/>
           <Route path="categories/create" element={<CreateCategory/>}/>
           <Route path="categories/update/:id" element={<UpdateCategory/>}/>
+          <Route path="publishers" element={<PublisherList/>}/>
+          <Route path="publishers/create" element={<CreatePublisher/>}/>
+          <Route path="publishers/update/:id" element={<UpdatePublisher/>}/>
         </Route>
       </Routes>
     </>
