@@ -93,7 +93,7 @@ function UpdateBook() {
                 body : JSON.stringify(values)
             });
             if(response.ok){
-                console.log("kitap başarıyla güncellendi...");
+                console.log("Kitap başarıyla güncellendi...");
                 navigate("/admin/books");
             }else{
                 console.log("Kitap güncellenirken bir hata oluştu...");

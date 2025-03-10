@@ -14,6 +14,9 @@ import UpdatePublisher from "./pages/Admin/Publisher/UpdatePublisher";
 import BookList from "./pages/Admin/Book/BookList";
 import CreateBook from "./pages/Admin/Book/CreateBook";
 import UpdateBook from "./pages/Admin/Book/UpdateBook";
+import QuoteList from "./pages/Admin/Quote/QuoteList";
+import CreateQuote from "./pages/Admin/Quote/CreateQuote";
+import UpdateQuote from "./pages/Admin/Quote/UpdateQuote";
 
 function App() {
   return (
@@ -35,6 +38,9 @@ function App() {
           <Route path="books" element={<BookList/>}/>
           <Route path="books/create" element={<CreateBook/>}/>
           <Route path="books/update/:id" element={<UpdateBook/>}/>
+          <Route path="quotes" element={<QuoteList/>}/>
+          <Route path="quotes/create" element={<CreateQuote/>}/>
+          <Route path="quotes/update/:id" element={<UpdateQuote/>}/>
         </Route>
       </Routes>
     </>
