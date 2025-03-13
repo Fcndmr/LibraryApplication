@@ -18,13 +18,19 @@ import QuoteList from "./pages/Admin/Quote/QuoteList";
 import CreateQuote from "./pages/Admin/Quote/CreateQuote";
 import UpdateQuote from "./pages/Admin/Quote/UpdateQuote";
 import BookDetailsPage from "./pages/BookDetailsPage";
+import AuthorDetailsPage from "./pages/AuthorDetailsPage";
+import AuthorPage from "./pages/AuthorPage";
+import BookPage from "./pages/BookPage";
 
 function App() {
   return (
     <>
       <Routes>
         <Route path="/" element={<HomePage/>}/>
+        <Route path="/book" element={<BookPage/>}/>
         <Route path="/book/:bookId" element={<BookDetailsPage/>}/>
+        <Route path="/author" element={<AuthorPage/>}/>
+        <Route path="/author/:authorId" element={<AuthorDetailsPage/>}/>
         <Route path="/contact" element={<ContactPage/>}/>
         <Route path="/about" element={<AboutPage/>}/>
         <Route path="/admin/*">
