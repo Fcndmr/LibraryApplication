@@ -17,12 +17,14 @@ import UpdateBook from "./pages/Admin/Book/UpdateBook";
 import QuoteList from "./pages/Admin/Quote/QuoteList";
 import CreateQuote from "./pages/Admin/Quote/CreateQuote";
 import UpdateQuote from "./pages/Admin/Quote/UpdateQuote";
+import BookDetails from "./pages/BookDetails";
 
 function App() {
   return (
     <>
       <Routes>
         <Route path="/" element={<HomePage/>}/>
+        <Route path="/book/:bookId" element={<BookDetails/>}/>
         <Route path="/contact" element={<ContactPage/>}/>
         <Route path="/about" element={<AboutPage/>}/>
         <Route path="/admin/*">

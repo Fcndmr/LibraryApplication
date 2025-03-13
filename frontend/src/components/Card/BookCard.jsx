@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 
 function BookCard({book}) {
   return (
@@ -16,9 +16,12 @@ function BookCard({book}) {
               {book.title}
             </h2>
             <h3 className="text-sm text-gray-600 mt-1 italic">{book.author.name}</h3>
-            <button className="mt-3 bg-blue-500 hover:bg-blue-600 text-white font-medium py-1.5 px-4 rounded-md transition">
-              Detaylı Bak
-            </button>
+            <Link to={`/book/${book._id}`} state={{ book }}>
+              <button className="mt-3 bg-blue-500 hover:bg-blue-600 text-white font-medium py-1.5 px-4 rounded-md transition">
+                Detaylı Bak
+              </button>
+            </Link>
+            
           </div>
         </div>
     </>
