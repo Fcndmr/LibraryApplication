@@ -1,6 +1,6 @@
 import { useLocation, useNavigate } from "react-router-dom";
 
-function BookDetails() {
+function BookDetailsPage() {
     const location = useLocation();
     const navigate = useNavigate();
     const book = location.state?.book;
@@ -63,4 +63,4 @@ function BookDetails() {
       );
 }
 
-export default BookDetails
+export default BookDetailsPage
