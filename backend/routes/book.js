@@ -14,7 +14,10 @@ router.post("/", async (req, res) => {
 
 router.get("/", async (req, res) => {
     try {
-        const books = await Book.find();
+        const books = await Book.find()
+            .populate("author", "name")
+            .populate("publisher", "name")
+            .populate("category", "name");
         res.status(200).json(books);
     } catch (error) {
         res.status(500).json({error : "Sunucu hatası..."});
