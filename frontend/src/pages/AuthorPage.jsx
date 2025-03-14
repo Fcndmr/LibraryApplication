@@ -1,9 +1,10 @@
 import { useContext } from "react";
-import { AuthorContext } from "../context/AuthorContext"
+import { AuthorContext } from "../context/AuthorContext";
 import AuthorCard from "../components/Card/AuthorCard";
 
 function AuthorPage() {
     const { authors, loading } = useContext(AuthorContext);
+    
 
   if (loading) return <div className="text-4xl">Yükleniyor...</div>;
   return (

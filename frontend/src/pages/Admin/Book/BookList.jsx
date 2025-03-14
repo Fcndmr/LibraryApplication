@@ -28,17 +28,17 @@ function BookList() {
                     ]
                 );
                 const dataSource = bookList.map( book => {
-                    const authorId = book.author;
+                    /*const authorId = book.author;
                     const author = authorList.find(author => author._id === authorId);
                     const publisherId = book.publisher;
                     const publisher = publisherList.find(publisher => publisher._id === publisherId);
                     const categoryId = book.category;
-                    const category = categoryList.find(category => category._id === categoryId);
+                    const category = categoryList.find(category => category._id === categoryId);*/
                     return{
                         ...book,
-                        authorName : author ? author.name : "",
-                        publisherName : publisher ? publisher.name : "",
-                        categoryName : category ? category.name : ""
+                        authorName : book.author.name,
+                        publisherName : book.publisher.name,
+                        categoryName : book.category.name
                     }
                 });
                 setBooks(dataSource);

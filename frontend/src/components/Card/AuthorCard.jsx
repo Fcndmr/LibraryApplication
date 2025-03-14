@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function AuthorCard({author}) {
   return (
     <>
-      <div className="max-w-xs bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 p-3">
+      <div className="max-w-xs bg-gray-300 rounded-xl shadow-md overflow-hidden border border-gray-600 p-3">
           <div className="w-full aspect-[2/3]">
             <img
               className="w-full h-full object-cover rounded-lg"

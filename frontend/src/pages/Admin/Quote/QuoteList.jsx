@@ -26,14 +26,14 @@ function QuoteList() {
                     ]
                 );
                 const dataSource = quoteList.map( quote => {
-                    const authorId = quote.author;
+                    /*const authorId = quote.author;
                     const author = authorList.find(author => author._id === authorId);
                     const bookId = quote.book;
-                    const book = bookList.find(book => book._id === bookId);
+                    const book = bookList.find(book => book._id === bookId);*/
                     return{
                         ...quote,
-                        authorName : author ? author.name : "",
-                        bookName : book ? book.title : ""
+                        authorName : quote.author.name,
+                        bookName : quote.book.title
                     }
                 });
                 setQuotes(dataSource);
