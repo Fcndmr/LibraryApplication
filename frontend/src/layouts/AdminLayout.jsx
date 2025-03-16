@@ -152,6 +152,32 @@ function AdminLayout({children}) {
           },
         ],
       },
+      {
+        key: "7",
+        icon: <UserOutlined />,
+        label: "User",
+        path: "/admin/users",
+        children: [
+          {
+            key: "7-1",
+            icon: <UserOutlined />,
+            label: "Add User",
+            path: "/admin/users/create",
+            onClick: () => {
+              navigate("/admin/users/create");
+            },
+          },
+          {
+            key: "7-2",
+            icon: <UserOutlined />,
+            label: "User List",
+            path: "/admin/users",
+            onClick: () => {
+              navigate("/admin/users");
+            },
+          },
+        ],
+      }
   ];
   return (
     <>

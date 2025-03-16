@@ -21,6 +21,10 @@ import BookDetailsPage from "./pages/BookDetailsPage";
 import AuthorDetailsPage from "./pages/AuthorDetailsPage";
 import AuthorPage from "./pages/AuthorPage";
 import BookPage from "./pages/BookPage";
+import AccountPage from "./pages/AccountPage";
+import UserList from "./pages/Admin/User/UserList";
+import CreateUser from "./pages/Admin/User/CreateUser";
+import UpdateUser from "./pages/Admin/User/UpdateUser";
 
 function App() {
   return (
@@ -33,6 +37,7 @@ function App() {
         <Route path="/author/:authorId" element={<AuthorDetailsPage/>}/>
         <Route path="/contact" element={<ContactPage/>}/>
         <Route path="/about" element={<AboutPage/>}/>
+        <Route path="/user" element={<AccountPage/>}/>
         <Route path="/admin/*">
           <Route path="authors" element={<AuthorList/>}/>
           <Route path="authors/create" element={<CreateAuthor/>}/>
@@ -49,6 +54,9 @@ function App() {
           <Route path="quotes" element={<QuoteList/>}/>
           <Route path="quotes/create" element={<CreateQuote/>}/>
           <Route path="quotes/update/:id" element={<UpdateQuote/>}/>
+          <Route path="users" element={<UserList/>}/>
+          <Route path="users/create" element={<CreateUser/>}/>
+          <Route path="users/update/:id" element={<UpdateUser/>}/>
         </Route>
       </Routes>
     </>
